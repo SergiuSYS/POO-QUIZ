@@ -100,7 +100,7 @@
         "answer": 2
     },
     {
-        "question": "Urmatoarea clasa are constructor?",
+        "question": "Urmatoarea clasa are constructor? internal class Student { public required string Name {get; set;} public required string RegistrationNumber {get; set;} }",
         "options": ["da", "nu"],
         "answer": 0
     },
