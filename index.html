@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+        .score-container {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .question {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        .answers button {
+            background: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            margin: 5px 0;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.3s;
+        }
+        .answers button:hover {
+            background: #0056b3;
+        }
+        .score {
+            font-size: 1.5em;
+            margin-top: 20px;
+        }
+        .correct {
+        background-color: #28a745 !important; /* Verde */
+        color: white;
+        }
+
+        .wrong {
+            background-color: #dc3545 !important; /* Roșu */
+            color: white;
+        }
+
+        .fade {
+            opacity: 0.6;
+            transition: opacity 0.5s ease; /* Fade doar pentru albastre */
+        }
+
+        .disabled {
+            pointer-events: none; /* Dezactivează click-ul */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Scorul este afișat aici -->
+        <div class="score-container">
+            <span id="current-score">Score: 0</span> / <span id="total-questions">Loading...</span>
+        </div>
+        <div id="quiz">
+            <div class="question" id="question">Loading...</div>
+            <div class="answers" id="answers"></div>
+        </div>
+        <div class="score" id="score" style="display: none;"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
