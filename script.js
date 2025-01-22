@@ -8,7 +8,6 @@ const scoreEl = document.getElementById("score");
 const currentScoreEl = document.getElementById("current-score");
 const totalQuestionsEl = document.getElementById("total-questions");
 
-// Funcție pentru amestecarea unui array
 function shuffle(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -16,14 +15,13 @@ function shuffle(array) {
     }
 }
 
-// Încărcăm datele din fișierul JSON
 async function loadQuizData() {
     try {
-        const response = await fetch('quizData.json'); // Încarcă fișierul JSON
-        quizData = await response.json(); // Parsează JSON-ul
-        shuffle(quizData); // Amestecăm întrebările
-        totalQuestionsEl.textContent = quizData.length; // Afișăm numărul total de întrebări
-        loadQuestion(); // Începe să încarce prima întrebare
+        const response = await fetch('quizData.json');  
+        quizData = await response.json();  
+        shuffle(quizData);  
+        totalQuestionsEl.textContent = quizData.length;  
+        loadQuestion();  
     } catch (error) {
         console.error("Eroare la încărcarea datelor:", error);
     }
@@ -33,18 +31,16 @@ function loadQuestion() {
     const currentQuestion = quizData[currentQuestionIndex];
     questionEl.textContent = currentQuestion.question;
 
-    // Amestecăm opțiunile și actualizăm indexul răspunsului corect
     const options = [...currentQuestion.options];
     const correctAnswer = options[currentQuestion.answer];
     shuffle(options);
     currentQuestion.answer = options.indexOf(correctAnswer);
 
-    // Afișăm opțiunile
     answersEl.innerHTML = "";
     options.forEach((option, index) => {
         const button = document.createElement("button");
         button.textContent = option;
-        button.addEventListener("click", () => handleAnswer(index)); // Pasăm indexul
+        button.addEventListener("click", () => handleAnswer(index));  
         answersEl.appendChild(button);
     });
 }
@@ -53,29 +49,25 @@ function handleAnswer(selectedIndex) {
     const currentQuestion = quizData[currentQuestionIndex];
     const buttons = answersEl.querySelectorAll("button");
 
-    // Colorează butoanele și aplică fade doar pe butoanele albastre
     buttons.forEach((button, index) => {
         if (index === currentQuestion.answer) {
-            button.classList.add("correct"); // Răspuns corect devine verde
+            button.classList.add("correct");  
         }
         if (index === selectedIndex && index !== currentQuestion.answer) {
-            button.classList.add("wrong"); // Răspuns greșit devine roșu
+            button.classList.add("wrong");  
         }
         if (index !== selectedIndex && index !== currentQuestion.answer) {
-            button.classList.add("fade"); // Fade pentru restul
+            button.classList.add("fade");  
         }
-        button.classList.add("disabled"); // Dezactivează toate butoanele
+        button.classList.add("disabled");  
     });
 
-    // Actualizează scorul
     if (selectedIndex === currentQuestion.answer) {
         score++;
     }
 
-    // Actualizează scorul afișat
     currentScoreEl.textContent = score;
 
-    // Trecem la următoarea întrebare după un scurt interval
     setTimeout(() => {
         currentQuestionIndex++;
         if (currentQuestionIndex < quizData.length) {
@@ -83,7 +75,7 @@ function handleAnswer(selectedIndex) {
         } else {
             showScore();
         }
-    }, 2000); // Pauză de 1 secundă pentru a vedea culorile
+    }, 2000); 
 }
 
 function showScore() {
@@ -92,6 +84,4 @@ function showScore() {
     scoreEl.style.display = "block";
     scoreEl.textContent = `You scored ${score} out of ${quizData.length}!`;
 }
-
-// Începem quiz-ul prin încărcarea datelor
 loadQuizData();
