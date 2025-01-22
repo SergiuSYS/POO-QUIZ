@@ -83,7 +83,7 @@ function handleAnswer(selectedIndex) {
         } else {
             showScore();
         }
-    }, 1000); // Pauză de 1 secundă pentru a vedea culorile
+    }, 2000); // Pauză de 1 secundă pentru a vedea culorile
 }
 
 function showScore() {
