@@ -378,5 +378,125 @@
         "question": "Cum putem controla instantierea obiectelor in .net core?",
         "options": ["generic host", "dependency injection", "singleton", "toate", "niciuna"],
         "answer": 0
+    },
+    {
+        "question": "Ce este mostenirea in programarea orientata pe obiecte?",
+        "options": ["permite unei clase dobandeasca atributele si comportamentul alteia", "permite ascunde detaliile interne ale unui obiect", "permite crearea de metode multiple cu parametri diferiti", "permite combinarea mai multor clase intr-una singura"],
+        "answer": 0
+    },
+    {
+        "question": "Cum se numeste clasa mostenita?",
+        "options": ["parinte", "copil", "Parametru", "Mostenire"],
+        "answer": 0
+    },
+    {
+        "question": "Ce este polimorfismul in programarea orientata pe obiecte?",
+        "options": ["Capacitatea de a ascunde detaliile interne ale unui obiect", "Capacitatea de a crea o noua clasa dintr-o clasa existenta", "Capacitatea unei variabile de a lua mai multe forme", "Capacitatea de a combin amai multe clase intr-una singura"],
+        "answer": 2
+    },
+    {
+        "question": "Care dintre urmatoarele este un exemplu de polimorfism?",
+        "options": ["Supra incarcare Metodelor(Method Overloading)", "Suprascrierea Metodelor(Method Overriding)", "Atat A cat si B", "niciuna"],
+        "answer": 2
+    },
+    {
+        "question": "Ce este compozitia in programarea orientata pe obiecte?",
+        "options": ["O clasa dobandeste proprietatile alteia", "principiu de design in care o clasa contine o referinta", "Ascunde detaliile interne ale unui obiect", "crearea de metode multiple cu parametri diferiti"],
+        "answer": 1
+    },
+    {
+        "question": "Care dintre urmatoarele descrie cel mai bine compozitia?",
+        "options": [" 'Are-o'('Has-a')", "'Este-o' ('Is-a')", "'Foloseste-o'('Uses-a')", "'Mosteneste-o' ('Inherits-a')"],
+        "answer": 0
+    },
+    {
+        "question": "Ce este important pentru o gandire OO",
+        "options": ["gandirea concreta", "interfata cat mai cuprinzatoare", "combinarea interfetei cu implementarea", "gandirea abstracta"],
+        "answer": 3
+    },
+    {
+        "question": "Ce trebuie sa stie utilizatorul unei clase ?",
+        "options": ["implementarea", "interfata"],
+        "answer": 1
+    },
+    {
+        "question": "Schimbarea interfetei genereaza modificari semnificative pentru utilizator?",
+        "options": ["DA", "NU"],
+        "answer": 1
+    },
+    {
+        "question": "Implementarea este . . .",
+        "options": ["esentiala pentru apelarea comportamentului", "limitata de ce are nevoie utilizatorul", "ascunsa utilizatorului", "reprezentata doar de atribute"],
+        "answer": 2
+    },
+    {
+        "question": "Care interfata este mai utila pentru a reprezenta un taxi?",
+        "options": ["de tip navigatie(stanga, dreapta, etc.))", "specificare adestinatiei"],
+        "answer": 1
+    },
+    {
+        "question": "Care din urmatoarele probleme pot fi cauzate de lipsa documentatiei?",
+        "options": ["folosirea gresita a clasei", "duplicare de cod si efort", "modificara eronata a functionalitatii", "toate","niciuna"],
+        "answer": 3
+    },
+    {
+        "question": "Care din urmatoarele afirmatii sunt adevarate vis-a-vis de scrierea comentariile?",
+        "options": ["Trebuie explicata fiecare linie din cod", "Imposibilitatea de a scrie comentarii clare indica o problema in cod", "Comentariile trebuie sa explice codul prost scris", "toate","niciuna"],
+        "answer": 1
+    },
+    {
+        "question": "Ce presupune proiectarea claselor pentru reutilizare?",
+        "options": ["trebuie tinut cont de locurile undeva fi folosita clasa", "trebuie identificate toate scenariile in care va fi folosita clasa"],
+        "answer": 0
+    },
+    {
+        "question": "Care solutie este mai extensibila vis-a-vis de modelarea unui angajat si a unui client in acelasi program?",
+        "options": ["Definirea a doua clase complet separate", "Definirea a doua clase care mostenesc clasa Persoana"],
+        "answer": 1
+    },
+    {
+        "question": "Cum afecteaza membrii statici extensibilitatea?",
+        "options": ["o cresc", "o scad"],
+        "answer": 1
+    },
+    {
+        "question": "Cum poate fi abstractizat codul care nu este portabil?",
+        "options": ["invelitoare", "Abstract", "Virtual", "Static"],
+        "answer": 0
+    },
+    {
+        "question": "Ce trebuie facut cand interactionam cu un serviciu extern?",
+        "options": ["apalam serviciul unde este nevoie si folosim blocul try-catch", "folosim o clasa wrapper si folosim try-catch", "folosim o clasa wrapper, nu este nevoie de try-catch", "apalam serviciul direct, pentru simplitate nu abstractizam"],
+        "answer": 1
+    },
+    {
+        "question": "Ce ajuta la obtinerea unui cod usor de intretinut?",
+        "options": ["descompunerea unei metode in metode mai mici", "separarea codului in functie de dependinte", "separarea codului in clase decuplate", "toate", "niciuna"],
+        "answer": 3
+    },
+    {
+        "question": "Ce concepte OOP folosim pentru a modela metode de calculare a mediilor diferite in functie de disciplina?",
+        "options": ["mostenire", "polimorfism", "compozitie", "mostenire si compozitie","mostenire si polimorfism","compozitie si polimorfism"],
+        "answer": 4
+    },
+    {
+        "question": "Ce concepte OOP folosim pentru a modela o companie ce se ocupa cu vanzarea proprietatilor care pot fi terenuri, apartamente si case?",
+        "options": ["supraincarcarea", "mostenire", "polimorfism", "compozitie","toate","niciuna"],
+        "answer": 4
+    },
+    {
+        "question": "Ce concepte OOP folosim pentru a modela adunarea valorilor de tip double, int si float in orice combinatie?",
+        "options": ["supraincarcarea", "mostenire", "polimorfism", "compozitie","toate","niciuna"],
+        "answer": 0
+    },
+    {
+        "question": "Cum modelam o functie utilitara ce permite formatarea valorilor de tip sume in LEI?",
+        "options": ["metoda a instantei", "metoda a clasei", "atribut al instantei", "atribut al clasei"],
+        "answer": 1
+    },
+    {
+        "question": "Cum modelam o regula de validare care verifica faptul ca suma tranzactiei bancare este mai mare ca zero?",
+        "options": ["se folosesc conditii si se returneaza un rezultat care indica succesul", "se folosesc expresii conditionale si se arunca o exceptie", "se foloseste supraincarcarea", "se foloseste suprascrierea"],
+        "answer": 0
     }
 ]
